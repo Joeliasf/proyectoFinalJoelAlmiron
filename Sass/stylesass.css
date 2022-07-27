@@ -1,0 +1,643 @@
+/* variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #6421ff, bisque);
+}
+body .cuerpo {
+  display: grid;
+  grid-template-areas: "inicio inicio" "imagen1 info1" "imagen2 video" "imagen2 info2" "footer footer";
+  grid-template-columns: 40% auto;
+  grid-template-rows: 250px 400px 300px 300px auto;
+  gap: 20px;
+}
+body .cuerpo .encabezado {
+  grid-area: inicio;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(#6421ff), rgb(124, 7, 7), bisque;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .encabezado a img {
+  height: auto;
+  width: 240px;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .encabezado .menu ul {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  list-style-type: none;
+  text-align: right;
+  font-size: 1.2rem;
+  font-family: "Sen", sans-serif;
+}
+body .cuerpo .encabezado .menu ul li a {
+  text-decoration: none;
+  color: #1c1e21;
+  background-color: bisque;
+  margin: 10px 5px;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+  border-radius: 10px;
+}
+body .cuerpo .encabezado .menu ul li a:hover {
+  background-color: #6421ff;
+}
+body .cuerpo .imagenPrincipal {
+  grid-area: imagen1;
+  display: grid;
+  justify-items: center;
+}
+body .cuerpo .imagenPrincipal img {
+  margin-top: 20px;
+  height: 300px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+  transition: all 1s;
+}
+body .cuerpo .imagenPrincipal img:hover {
+  transform: scale(1.2, 1.2);
+}
+body .cuerpo .descripcionWeb {
+  grid-area: info1;
+  padding: 100px;
+  text-align: center;
+}
+body .cuerpo .descripcionWeb h1 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  margin-top: -50px;
+  padding-bottom: 50px;
+  color: #1c1e21;
+}
+body .cuerpo .descripcionWeb .parrafo--principal {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 40px;
+  color: #1c1e21;
+}
+body .cuerpo .video {
+  grid-area: video;
+  display: grid;
+  justify-items: center;
+}
+body .cuerpo .video iframe {
+  height: 300px;
+  width: 320px;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .imagenesTrabajos {
+  grid-area: imagen2;
+  display: grid;
+  justify-items: center;
+}
+body .cuerpo .imagenesTrabajos img {
+  transition: all 1s;
+}
+body .cuerpo .imagenesTrabajos img:nth-child(1) {
+  margin-bottom: 20px;
+  height: 300px;
+  width: auto;
+  border: 2px solid;
+  border-color: grey;
+}
+body .cuerpo .imagenesTrabajos img:nth-child(2) {
+  margin-top: 15px;
+  height: 300px;
+  width: auto;
+  border: 2px solid;
+  border-color: grey;
+}
+body .cuerpo .imagenesTrabajos img:hover {
+  transform: scale(1.2, 1.2);
+}
+body .cuerpo .descripcionTrabajos {
+  grid-area: info2;
+  text-align: center;
+  padding: 100px;
+}
+body .cuerpo .descripcionTrabajos h2 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  margin-top: -50px;
+  padding-bottom: 50px;
+  color: #1c1e21;
+}
+body .cuerpo .descripcionTrabajos .parrafos {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 40px;
+  color: #1c1e21;
+}
+body .cuerpo .footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #6421ff;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+  font-weight: bold;
+  margin-top: 50px;
+}
+body .cuerpo .footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Sen", sans-serif;
+  padding: 10px;
+}
+body .cuerpo .footer ul li {
+  text-decoration: none;
+  color: #1c1e21;
+  background-color: #6421ff;
+  border-style: double;
+  border-color: rgb(13, 9, 27);
+  border-radius: 10px;
+  align-self: center;
+  margin: 3px;
+}
+body .cuerpo .formulario {
+  display: grid;
+  grid-area: info1;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 60px;
+  font-family: "Sen", sans-serif;
+}
+body .cuerpo .formulario h1 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+body .cuerpo .formulario .form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 5px;
+}
+body .cuerpo .formulario .form:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .cuerpo .materiales {
+  grid-area: info1;
+  text-align: center;
+  line-height: 40px;
+}
+body .cuerpo .materiales h1 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  padding-bottom: 50px;
+}
+body .cuerpo .materiales .parrafos {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #1c1e21;
+}
+body .cuerpo .pinceles {
+  grid-area: imagen1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  line-height: 30px;
+}
+body .cuerpo .pinceles h2 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+body .cuerpo .pinceles img {
+  height: 250px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .pinceles .parrafos {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #1c1e21;
+}
+body .cuerpo .pinturas {
+  grid-area: imagen2;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  line-height: 40px;
+}
+body .cuerpo .pinturas h2 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+body .cuerpo .pinturas h3 {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+body .cuerpo .pinturas img {
+  height: 175px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .pinturas .parrafos {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #1c1e21;
+}
+body .cuerpo .bastidores {
+  grid-area: video;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  line-height: 40px;
+}
+body .cuerpo .bastidores h2 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+body .cuerpo .bastidores h3 {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+}
+body .cuerpo .bastidores img {
+  height: 175px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .bastidores .parrafos {
+  font-style: italic;
+  font-family: "Sen", sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: #1c1e21;
+}
+body .cuerpo .productos {
+  grid-area: info1;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+body .cuerpo .productos h1 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  margin-top: -20px;
+  padding: 50px 0 50px 0;
+  margin-left: 50px;
+}
+body .cuerpo .productos .imagenesCamperas {
+  grid-row: 2/3;
+  margin-left: -100px;
+}
+body .cuerpo .productos .imagenesCamperas h2 {
+  margin-left: 170px;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+body .cuerpo .productos .imagenesCamperas .imagen-campera {
+  height: 200px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .productos .imagenesCuadros {
+  grid-row: 3/4;
+  margin-left: -195px;
+}
+body .cuerpo .productos .imagenesCuadros h2 {
+  margin-left: 280px;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 500;
+  padding: 50px 0 50px 0;
+}
+body .cuerpo .productos .imagenesCuadros .imagen-cuadro {
+  height: 200px;
+  width: auto;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+}
+body .cuerpo .compras {
+  grid-area: info2;
+}
+body .cuerpo .compras ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  list-style-type: none;
+  text-align: right;
+  font-size: 1.2rem;
+  font-family: "Sen", sans-serif;
+  margin-left: -500px;
+}
+body .cuerpo .compras ul .botonCompra, body .cuerpo .compras ul .botonCompra--Talles, body .cuerpo .compras ul .botonCompra--Carrito {
+  text-decoration: none;
+  color: #1c1e21;
+  background-color: rgb(120, 226, 120);
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 15px;
+}
+body .cuerpo .compras ul .botonCompra:hover, body .cuerpo .compras ul .botonCompra--Talles:hover, body .cuerpo .compras ul .botonCompra--Carrito:hover {
+  background-color: #6421ff;
+}
+body .cuerpo .compras ul .botonCompra--Carrito {
+  background-color: rgb(63, 63, 202);
+}
+body .cuerpo .compras ul .botonCompra--Talles {
+  background-color: rgb(202, 63, 149);
+}
+body .cuerpo .videos {
+  grid-area: info1;
+}
+body .cuerpo .videos h1 {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  font-style: none;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  margin-top: -20px;
+  padding: 50px 0 50px 0;
+  margin-left: 70px;
+}
+body .cuerpo .videos video {
+  width: 500px;
+  height: 300px;
+  margin-left: -130px;
+  border: 2px solid;
+  border-color: rgb(13, 9, 27);
+  margin-bottom: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    background-color: rgb(68, 162, 216);
+  }
+  body .cuerpo {
+    display: grid;
+    grid-template-areas: "inicio" "info1" "imagen1" "info2" "imagen2" "video" "footer";
+    grid-template-columns: 100vw;
+    grid-template-rows: 150px 400px 300px 300px 300px 300px auto;
+    justify-content: left;
+  }
+  body .cuerpo .encabezado {
+    grid-area: inicio;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  body .cuerpo .encabezado a img {
+    height: auto;
+    width: 100px;
+  }
+  body .cuerpo .menu ul {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .imagenesTrabajos {
+    display: flex;
+    justify-content: center;
+  }
+  body .cuerpo .descripcionWeb h1 {
+    text-decoration: underline;
+    font-size: 0.7rem;
+  }
+  body .cuerpo .descripcionWeb .parrafos {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  body .cuerpo .descripcionTrabajos h2 {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .descripcionTrabajos .parrafos {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+  body .cuerpo .imagenesTrabajos {
+    grid-area: imagen2;
+    display: flex;
+    flex-direction: column;
+  }
+  body .cuerpo .imagenesTrabajos img:nth-child(1) {
+    display: none;
+  }
+  body .cuerpo .imagenesTrabajos img :nth-child(2) {
+    height: 300px;
+    width: auto;
+    border: 2px solid;
+    border-color: rgb(13, 9, 27);
+  }
+  body .cuerpo .footer ul {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .formulario {
+    justify-content: center;
+  }
+  body .cuerpo .materiales {
+    grid-area: info1;
+  }
+  body .cuerpo .materiales h1 {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .materiales .parrafos {
+    font-size: 0.7rem;
+    line-height: 30px;
+    margin-top: -40px;
+  }
+  body .cuerpo .pinceles {
+    grid-area: imagen1;
+    margin-top: -40px;
+  }
+  body .cuerpo .pinceles .parrafos {
+    line-height: 25px;
+    font-size: 0.7rem;
+  }
+  body .cuerpo .pinceles h2 {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .pinceles img {
+    height: auto;
+    width: 150px;
+  }
+  body .cuerpo .pinturas {
+    grid-area: info2;
+    line-height: 25px;
+  }
+  body .cuerpo .pinturas h2 {
+    font-size: 0.7rem;
+    padding-top: 10px;
+  }
+  body .cuerpo .pinturas h3 {
+    font-size: 0.7rem;
+    padding-top: 10px;
+  }
+  body .cuerpo .pinturas img {
+    height: auto;
+    width: 150px;
+    padding-top: 10px;
+  }
+  body .cuerpo .bastidores {
+    grid-area: video;
+    line-height: 25px;
+  }
+  body .cuerpo .bastidores h2 {
+    font-size: 0.7rem;
+    margin-top: -140px;
+  }
+  body .cuerpo .bastidores h3 {
+    font-size: 0.7rem;
+  }
+  body .cuerpo .bastidores .parrafos {
+    margin-top: -110px;
+  }
+  body .cuerpo .bastidores img {
+    height: 125px;
+    width: auto;
+  }
+  body .cuerpo .productos {
+    grid-area: info1;
+  }
+  body .cuerpo .productos h1 {
+    font-size: 0.7rem;
+    padding-top: -50px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  body .cuerpo .productos .imagenesCamperas {
+    margin-left: 0px;
+    text-align: center;
+  }
+  body .cuerpo .productos .imagenesCamperas h2 {
+    font-size: 0.7rem;
+    margin-left: 0px;
+  }
+  body .cuerpo .productos .imagenesCamperas .imagen-campera {
+    height: auto;
+    width: 150px;
+  }
+  body .cuerpo .productos .imagenesCamperas .imagen-campera:nth-child(4) {
+    width: 100%;
+  }
+  body .cuerpo .productos .imagenesCuadros {
+    margin-top: -20px;
+    margin-left: 0px;
+    text-align: center;
+  }
+  body .cuerpo .productos .imagenesCuadros h2 {
+    font-size: 0.7rem;
+    margin-left: 0px;
+  }
+  body .cuerpo .productos .imagenesCuadros .imagen-cuadro {
+    width: 200px;
+    height: auto;
+  }
+  body .cuerpo .videos {
+    grid-area: info1;
+    text-align: center;
+  }
+  body .cuerpo .videos h1 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding-top: -20px;
+    padding: 50px 0 50px 0;
+    margin-left: 0px;
+  }
+  body .cuerpo .videos video {
+    width: 100vw;
+    height: 300px;
+    margin-left: 0px;
+    margin-bottom: 50px;
+  }
+}
+.icon-fb {
+  background-color: blue;
+}
+
+.icon-yt {
+  background-color: red;
+}
+
+.icon-ig {
+  background-color: rgb(226, 110, 129);
+}
+
+.icon-wsp {
+  background-color: green;
+}
+
+.icon-fb {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-yt {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-wsp {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-ig {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=stylesass.css.map */
