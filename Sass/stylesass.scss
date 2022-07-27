@@ -7,7 +7,7 @@ $titleSize: 2.5rem;
 $fontSize: 1.2rem;
 $border: 2px solid;
 $borderColor: rgb(13, 9, 27);
-$fontMedia:0.7rem;
+$fontMedia:0.9rem;
 
 * {
     margin: 0;
@@ -473,16 +473,12 @@ body{
             .menu ul{
                 font-size: $fontMedia;
             }
-            .imagenesTrabajos{
-                display: flex;
-                justify-content: center;
-            }
             .descripcionWeb {
                 h1{
                     text-decoration: underline;
                     font-size: $fontMedia;
                 }
-                .parrafos{
+                .parrafo--principal{
                     font-size: $fontMedia;
                     line-height: 20px
                 }
@@ -505,7 +501,7 @@ body{
                         display: none;
                     }
                     :nth-child(2){
-                        height: 300px;
+                        height: 250px;
                         width: auto;
                         border: $border;
                         border-color:$borderColor;
@@ -617,6 +613,23 @@ body{
                         height: auto;
                     }
                 }
+            }
+            .compras{
+                grid-area: video;
+                margin-top: 200px;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 20px;
+                    li{
+                        margin-bottom: -90px;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        margin-right: 80px;
+                        align-content: center;
+                    }
+                }
+
             }
             .videos{
                 grid-area: info1;

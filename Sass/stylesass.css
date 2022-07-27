@@ -449,25 +449,21 @@ body .cuerpo .videos video {
     width: 100px;
   }
   body .cuerpo .menu ul {
-    font-size: 0.7rem;
-  }
-  body .cuerpo .imagenesTrabajos {
-    display: flex;
-    justify-content: center;
+    font-size: 0.9rem;
   }
   body .cuerpo .descripcionWeb h1 {
     text-decoration: underline;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
-  body .cuerpo .descripcionWeb .parrafos {
-    font-size: 0.7rem;
+  body .cuerpo .descripcionWeb .parrafo--principal {
+    font-size: 0.9rem;
     line-height: 20px;
   }
   body .cuerpo .descripcionTrabajos h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .descripcionTrabajos .parrafos {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 20px;
   }
   body .cuerpo .imagenesTrabajos {
@@ -479,13 +475,13 @@ body .cuerpo .videos video {
     display: none;
   }
   body .cuerpo .imagenesTrabajos img :nth-child(2) {
-    height: 300px;
+    height: 250px;
     width: auto;
     border: 2px solid;
     border-color: rgb(13, 9, 27);
   }
   body .cuerpo .footer ul {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .formulario {
     justify-content: center;
@@ -494,10 +490,10 @@ body .cuerpo .videos video {
     grid-area: info1;
   }
   body .cuerpo .materiales h1 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .materiales .parrafos {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 30px;
     margin-top: -40px;
   }
@@ -507,10 +503,10 @@ body .cuerpo .videos video {
   }
   body .cuerpo .pinceles .parrafos {
     line-height: 25px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .pinceles h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .pinceles img {
     height: auto;
@@ -521,11 +517,11 @@ body .cuerpo .videos video {
     line-height: 25px;
   }
   body .cuerpo .pinturas h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding-top: 10px;
   }
   body .cuerpo .pinturas h3 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding-top: 10px;
   }
   body .cuerpo .pinturas img {
@@ -538,11 +534,11 @@ body .cuerpo .videos video {
     line-height: 25px;
   }
   body .cuerpo .bastidores h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: -140px;
   }
   body .cuerpo .bastidores h3 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   body .cuerpo .bastidores .parrafos {
     margin-top: -110px;
@@ -555,7 +551,7 @@ body .cuerpo .videos video {
     grid-area: info1;
   }
   body .cuerpo .productos h1 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding-top: -50px;
     text-align: center;
     margin-left: 0px;
@@ -565,7 +561,7 @@ body .cuerpo .videos video {
     text-align: center;
   }
   body .cuerpo .productos .imagenesCamperas h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-left: 0px;
   }
   body .cuerpo .productos .imagenesCamperas .imagen-campera {
@@ -581,19 +577,35 @@ body .cuerpo .videos video {
     text-align: center;
   }
   body .cuerpo .productos .imagenesCuadros h2 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-left: 0px;
   }
   body .cuerpo .productos .imagenesCuadros .imagen-cuadro {
     width: 200px;
     height: auto;
   }
+  body .cuerpo .compras {
+    grid-area: video;
+    margin-top: 200px;
+  }
+  body .cuerpo .compras ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  body .cuerpo .compras ul li {
+    margin-bottom: -90px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 80px;
+    align-content: center;
+  }
   body .cuerpo .videos {
     grid-area: info1;
     text-align: center;
   }
   body .cuerpo .videos h1 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: 700;
     padding-top: -20px;
     padding: 50px 0 50px 0;
