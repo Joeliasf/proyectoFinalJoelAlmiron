@@ -1,10 +1,8 @@
-/* variables */
-
 $colorBase: #6421ff;
 $fontcolor: #1c1e21;
 $fontType: "Sen", sans-serif;
 $titleSize: 2.5rem;
-$fontSize: 1.2rem;
+$fontSize: 1.1rem;
 $border: 2px solid;
 $borderColor: rgb(13, 9, 27);
 $fontMedia:0.9rem;
@@ -33,14 +31,16 @@ body{
             justify-content: space-between;
             display: flex;
             flex-direction: row;
-            background: linear-gradient($colorBase), rgb(124, 7, 7), bisque;
+            background: linear-gradient($colorBase, rgb(45 47 47));
             border: $border;
             border-color: $borderColor;
             a img{
-                height: auto;
-                width: 240px;
+                height: 240px;
+                width: 280px;
+                margin-left: 50px;
                 border: $border;
                 border-color: $borderColor;
+                background-color: antiquewhite;
             }
             .menu ul{
                 display: flex;
@@ -50,16 +50,18 @@ body{
                 text-align: right;
                 font-size: $fontSize;
                 font-family: $fontType;
+                margin-top: 90px;
                 li a{
                     text-decoration: none;
                     color: $fontcolor;
-                    background-color: bisque;
-                    margin: 10px 5px;
+                    background-color: rgb(255 150 0);
+                    margin: 0px 100px 0px 0px;
+                    padding: 15px 15px 15px 15px;
                     border: $border;
                     border-color: $borderColor;
                     border-radius: 10px;
                     &:hover{
-                        background-color: $colorBase;
+                        background-color: rgb(106 194 124);
                     }
                 }
             }
@@ -121,14 +123,14 @@ body{
                 transition: all 1s ;
                 &:nth-child(1){
                     margin-bottom: 20px;
-                    height: 300px;
+                    height: 275px;
                     width: auto;
                     border: 2px solid;
                     border-color: grey;
                     }
                 &:nth-child(2){
                     margin-top: 15px;
-                    height: 300px;
+                    height: 275px;
                     width: auto;
                     border: 2px solid;
                     border-color: grey;
@@ -190,12 +192,20 @@ body{
                 }
             }
         }
+        .tikTok{
+            grid-area: imagen2;
+            margin: -382px 21px 39px 60px;
+        }
+        .instagram{
+            grid-area: info2;
+            margin: -675px 27px 60px 351px;
+        }
         .formulario {
             display: grid;
             grid-area: info1;
             justify-content: flex-start;
             align-content: center;
-            margin-top: 60px;
+            margin-top: 200px;
             font-family: $fontType;
             h1{
                 text-decoration: underline;
@@ -218,7 +228,7 @@ body{
             }
         }
         .materiales {
-            grid-area: info1;
+            grid-area: imagen1;
             text-align: center;
             line-height: 40px;
             h1{
@@ -238,7 +248,7 @@ body{
             }
         }
         .pinceles {
-            grid-area: imagen1;
+            grid-area: info1;
             display: grid;
             justify-items: center;
             text-align: center;
@@ -249,6 +259,7 @@ body{
                 font-style: none;
                 font-family: $fontType;
                 font-weight: 700;
+                margin-bottom: 10px;
             }
             img{
                 height: 250px;
@@ -276,6 +287,7 @@ body{
                 font-style: none;
                 font-family: $fontType;
                 font-weight: 700;
+                margin-top: 20px;
             }
             h3{
                 text-decoration: underline;
@@ -310,6 +322,7 @@ body{
                 font-style: none;
                 font-family: $fontType;
                 font-weight: 700;
+                padding-bottom: 30px;
             }
             h3{
                 text-decoration: underline;
@@ -345,13 +358,13 @@ body{
                 font-weight: 700;
                 margin-top: -20px;
                 padding: 50px 0 50px 0;
-                margin-left: 50px;
+                margin-left: 40px;
             }
             .imagenesCamperas{
                 grid-row: 2/3; 
                 margin-left: -100px;
                 h2{
-                    margin-left: 170px;
+                    margin-left: 185px;
                     text-decoration: underline;
                     font-size: $fontSize;
                     font-style: none;
@@ -370,7 +383,7 @@ body{
                 grid-row: 3/4;
                 margin-left: -195px;
                 h2{
-                    margin-left: 280px;
+                    margin-left: 285px;
                     text-decoration: underline;
                     font-size: $fontSize;
                     font-style: none;
@@ -439,7 +452,15 @@ body{
                 margin-left: -130px;
                 border: $border;
                 border-color: $borderColor;
-                margin-bottom: 50px;
+                margin-top: 0px;
+            }
+        }
+        .carousel{
+            grid-area: video;
+            margin-top: 180px;
+            margin-left: -300px;
+            img{
+                padding-left: 570px;
             }
         }
     }
@@ -468,10 +489,19 @@ body{
                 a img{
                     height: auto;
                     width: 100px;
+                    margin-left: 150px;
                 }
-            }
-            .menu ul{
-                font-size: $fontMedia;
+                .menu ul{
+                    padding: 20px;
+                    font-size: $fontMedia;
+                    margin-top: -10px;
+                    margin-left: 18px;
+                    li a{
+                        margin: 0px 15px 0px 0px;
+                        padding: 5px 5px 5px 5px;
+                        border-radius: 5px;
+                    }
+                }
             }
             .descripcionWeb {
                 h1{
@@ -500,7 +530,7 @@ body{
                     &:nth-child(1){
                         display: none;
                     }
-                    :nth-child(2){
+                    &:nth-child(2){
                         height: 250px;
                         width: auto;
                         border: $border;
@@ -515,6 +545,12 @@ body{
             }
             .formulario {
                 justify-content: center;
+            }
+            .tikTok{
+                grid-area: imagen2;
+            }
+            .instagram{
+                display: none;
             }
             .materiales {
                 grid-area: info1;
@@ -558,19 +594,23 @@ body{
                     width: 150px;
                     padding-top: 10px;
                 }
+                .parrafos{
+                    font-size: $fontMedia;
+                }
             }
             .bastidores{
                 grid-area: video;
                 line-height: 25px;
                 h2{
                     font-size: $fontMedia;
-                    margin-top: -140px;
+                    margin-top: -60px;
                 }
                 h3{
                     font-size: $fontMedia;
                 }
                 .parrafos{
-                    margin-top: -110px;
+                    margin-top: -30px;
+                    font-size: $fontMedia;
                 }
                 img{
                     height: 125px;
@@ -597,6 +637,7 @@ body{
                         width: 150px;
                         &:nth-child(4){
                             width: 100%;
+                            margin-top: 5px;
                         }
                     }
                 }
@@ -611,6 +652,7 @@ body{
                     .imagen-cuadro{
                         width: 200px;
                         height: auto;
+                        margin-top: 20px;
                     }
                 }
             }
@@ -645,7 +687,16 @@ body{
                     width: 100vw;
                     height: 300px;
                     margin-left: 0px;
-                    margin-bottom: 50px;
+                    margin-bottom: 100px;
+                }
+            }
+            .carousel{
+                grid-area: info2;
+                margin-top: 180px;
+                margin-left: 5px;
+                margin-right: 10px;
+                img{
+                    padding-left: 50px;
                 }
             }
         }

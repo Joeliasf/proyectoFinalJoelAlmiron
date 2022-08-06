@@ -1,4 +1,3 @@
-/* variables */
 * {
   margin: 0;
   padding: 0;
@@ -20,15 +19,17 @@ body .cuerpo .encabezado {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
-  background: linear-gradient(#6421ff), rgb(124, 7, 7), bisque;
+  background: linear-gradient(#6421ff, rgb(45, 47, 47));
   border: 2px solid;
   border-color: rgb(13, 9, 27);
 }
 body .cuerpo .encabezado a img {
-  height: auto;
-  width: 240px;
+  height: 240px;
+  width: 280px;
+  margin-left: 50px;
   border: 2px solid;
   border-color: rgb(13, 9, 27);
+  background-color: antiquewhite;
 }
 body .cuerpo .encabezado .menu ul {
   display: flex;
@@ -36,20 +37,22 @@ body .cuerpo .encabezado .menu ul {
   padding: 20px;
   list-style-type: none;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Sen", sans-serif;
+  margin-top: 90px;
 }
 body .cuerpo .encabezado .menu ul li a {
   text-decoration: none;
   color: #1c1e21;
-  background-color: bisque;
-  margin: 10px 5px;
+  background-color: rgb(255, 150, 0);
+  margin: 0px 100px 0px 0px;
+  padding: 15px 15px 15px 15px;
   border: 2px solid;
   border-color: rgb(13, 9, 27);
   border-radius: 10px;
 }
 body .cuerpo .encabezado .menu ul li a:hover {
-  background-color: #6421ff;
+  background-color: rgb(106, 194, 124);
 }
 body .cuerpo .imagenPrincipal {
   grid-area: imagen1;
@@ -85,7 +88,7 @@ body .cuerpo .descripcionWeb h1 {
 body .cuerpo .descripcionWeb .parrafo--principal {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 40px;
   color: #1c1e21;
 }
@@ -110,14 +113,14 @@ body .cuerpo .imagenesTrabajos img {
 }
 body .cuerpo .imagenesTrabajos img:nth-child(1) {
   margin-bottom: 20px;
-  height: 300px;
+  height: 275px;
   width: auto;
   border: 2px solid;
   border-color: grey;
 }
 body .cuerpo .imagenesTrabajos img:nth-child(2) {
   margin-top: 15px;
-  height: 300px;
+  height: 275px;
   width: auto;
   border: 2px solid;
   border-color: grey;
@@ -144,7 +147,7 @@ body .cuerpo .descripcionTrabajos h2 {
 body .cuerpo .descripcionTrabajos .parrafos {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 40px;
   color: #1c1e21;
 }
@@ -162,7 +165,7 @@ body .cuerpo .footer ul {
   flex-direction: column;
   list-style-type: none;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Sen", sans-serif;
   padding: 10px;
 }
@@ -176,12 +179,20 @@ body .cuerpo .footer ul li {
   align-self: center;
   margin: 3px;
 }
+body .cuerpo .tikTok {
+  grid-area: imagen2;
+  margin: -382px 21px 39px 60px;
+}
+body .cuerpo .instagram {
+  grid-area: info2;
+  margin: -675px 27px 60px 351px;
+}
 body .cuerpo .formulario {
   display: grid;
   grid-area: info1;
   justify-content: flex-start;
   align-content: center;
-  margin-top: 60px;
+  margin-top: 200px;
   font-family: "Sen", sans-serif;
 }
 body .cuerpo .formulario h1 {
@@ -204,7 +215,7 @@ body .cuerpo .formulario .form:nth-child(1) {
   justify-content: space-between;
 }
 body .cuerpo .materiales {
-  grid-area: info1;
+  grid-area: imagen1;
   text-align: center;
   line-height: 40px;
 }
@@ -219,12 +230,12 @@ body .cuerpo .materiales h1 {
 body .cuerpo .materiales .parrafos {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: #1c1e21;
 }
 body .cuerpo .pinceles {
-  grid-area: imagen1;
+  grid-area: info1;
   display: grid;
   justify-items: center;
   text-align: center;
@@ -236,6 +247,7 @@ body .cuerpo .pinceles h2 {
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 body .cuerpo .pinceles img {
   height: 250px;
@@ -246,7 +258,7 @@ body .cuerpo .pinceles img {
 body .cuerpo .pinceles .parrafos {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: #1c1e21;
 }
@@ -263,10 +275,11 @@ body .cuerpo .pinturas h2 {
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
+  margin-top: 20px;
 }
 body .cuerpo .pinturas h3 {
   text-decoration: underline;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
@@ -280,7 +293,7 @@ body .cuerpo .pinturas img {
 body .cuerpo .pinturas .parrafos {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: #1c1e21;
 }
@@ -297,10 +310,11 @@ body .cuerpo .bastidores h2 {
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
+  padding-bottom: 30px;
 }
 body .cuerpo .bastidores h3 {
   text-decoration: underline;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
@@ -314,7 +328,7 @@ body .cuerpo .bastidores img {
 body .cuerpo .bastidores .parrafos {
   font-style: italic;
   font-family: "Sen", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   color: #1c1e21;
 }
@@ -332,16 +346,16 @@ body .cuerpo .productos h1 {
   font-weight: 700;
   margin-top: -20px;
   padding: 50px 0 50px 0;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 body .cuerpo .productos .imagenesCamperas {
   grid-row: 2/3;
   margin-left: -100px;
 }
 body .cuerpo .productos .imagenesCamperas h2 {
-  margin-left: 170px;
+  margin-left: 185px;
   text-decoration: underline;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 500;
@@ -358,9 +372,9 @@ body .cuerpo .productos .imagenesCuadros {
   margin-left: -195px;
 }
 body .cuerpo .productos .imagenesCuadros h2 {
-  margin-left: 280px;
+  margin-left: 285px;
   text-decoration: underline;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: none;
   font-family: "Sen", sans-serif;
   font-weight: 500;
@@ -382,7 +396,7 @@ body .cuerpo .compras ul {
   padding: 20px;
   list-style-type: none;
   text-align: right;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: "Sen", sans-serif;
   margin-left: -500px;
 }
@@ -424,7 +438,15 @@ body .cuerpo .videos video {
   margin-left: -130px;
   border: 2px solid;
   border-color: rgb(13, 9, 27);
-  margin-bottom: 50px;
+  margin-top: 0px;
+}
+body .cuerpo .carousel {
+  grid-area: video;
+  margin-top: 180px;
+  margin-left: -300px;
+}
+body .cuerpo .carousel img {
+  padding-left: 570px;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -447,9 +469,18 @@ body .cuerpo .videos video {
   body .cuerpo .encabezado a img {
     height: auto;
     width: 100px;
+    margin-left: 150px;
   }
-  body .cuerpo .menu ul {
+  body .cuerpo .encabezado .menu ul {
+    padding: 20px;
     font-size: 0.9rem;
+    margin-top: -10px;
+    margin-left: 18px;
+  }
+  body .cuerpo .encabezado .menu ul li a {
+    margin: 0px 15px 0px 0px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
   }
   body .cuerpo .descripcionWeb h1 {
     text-decoration: underline;
@@ -474,7 +505,7 @@ body .cuerpo .videos video {
   body .cuerpo .imagenesTrabajos img:nth-child(1) {
     display: none;
   }
-  body .cuerpo .imagenesTrabajos img :nth-child(2) {
+  body .cuerpo .imagenesTrabajos img:nth-child(2) {
     height: 250px;
     width: auto;
     border: 2px solid;
@@ -485,6 +516,12 @@ body .cuerpo .videos video {
   }
   body .cuerpo .formulario {
     justify-content: center;
+  }
+  body .cuerpo .tikTok {
+    grid-area: imagen2;
+  }
+  body .cuerpo .instagram {
+    display: none;
   }
   body .cuerpo .materiales {
     grid-area: info1;
@@ -529,19 +566,23 @@ body .cuerpo .videos video {
     width: 150px;
     padding-top: 10px;
   }
+  body .cuerpo .pinturas .parrafos {
+    font-size: 0.9rem;
+  }
   body .cuerpo .bastidores {
     grid-area: video;
     line-height: 25px;
   }
   body .cuerpo .bastidores h2 {
     font-size: 0.9rem;
-    margin-top: -140px;
+    margin-top: -60px;
   }
   body .cuerpo .bastidores h3 {
     font-size: 0.9rem;
   }
   body .cuerpo .bastidores .parrafos {
-    margin-top: -110px;
+    margin-top: -30px;
+    font-size: 0.9rem;
   }
   body .cuerpo .bastidores img {
     height: 125px;
@@ -570,6 +611,7 @@ body .cuerpo .videos video {
   }
   body .cuerpo .productos .imagenesCamperas .imagen-campera:nth-child(4) {
     width: 100%;
+    margin-top: 5px;
   }
   body .cuerpo .productos .imagenesCuadros {
     margin-top: -20px;
@@ -583,6 +625,7 @@ body .cuerpo .videos video {
   body .cuerpo .productos .imagenesCuadros .imagen-cuadro {
     width: 200px;
     height: auto;
+    margin-top: 20px;
   }
   body .cuerpo .compras {
     grid-area: video;
@@ -615,7 +658,16 @@ body .cuerpo .videos video {
     width: 100vw;
     height: 300px;
     margin-left: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  body .cuerpo .carousel {
+    grid-area: info2;
+    margin-top: 180px;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  body .cuerpo .carousel img {
+    padding-left: 50px;
   }
 }
 .icon-fb {
